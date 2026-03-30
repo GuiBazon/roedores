@@ -7,6 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
         
+        /* RESET GLOBAL */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -24,6 +25,7 @@
             padding: 20px;
         }
         
+        /* CONTAINER PRINCIPAL */
         .presentation-container {
             width: 100%;
             max-width: 1100px;
@@ -36,6 +38,7 @@
             overflow: hidden;
         }
 
+        /* ÁREA DOS SLIDES */
         .slides-wrapper {
             flex: 1; 
             overflow-y: auto; 
@@ -66,6 +69,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* CAPA E FIM */
         .slide-capa { background: linear-gradient(135deg, #1e293b, #0f172a, #334155); color: white; }
         
         .badge {
@@ -86,15 +90,62 @@
         }
 
         .slide-final { background: #f8fafc; }
-        .slide-final h2 { font-size: 3rem; color: #0f172a; margin-bottom: 15px; border: none; }
+        .slide-final h2 { font-size: 2.8rem; color: #0f172a; margin-bottom: 10px; border: none; }
+        .slide-final > p { margin-bottom: 30px; }
+        
+        /* ESTILOS DOS QR CODES */
+        .qrcode-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap; /* Permite jogar pra linha de baixo se faltar espaço */
+        }
+        .qrcode-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+        }
+        .qrcode-card img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 15px;
+            /* Fundo branco extra pra garantir contraste no projetor */
+            background: white; 
+            padding: 5px;
+            border-radius: 8px;
+        }
+        .qrcode-card span {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0369a1;
+            text-align: center;
+        }
+        .qrcode-card p {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin: 5px 0 0 0;
+            text-align: center;
+            line-height: 1.3;
+        }
+
         .referencia-box {
-            margin-top: 40px; background: white; padding: 25px; border-radius: 12px;
+            background: white; padding: 20px; border-radius: 12px;
             border: 1px solid #e2e8f0; width: 100%; max-width: 600px; text-align: left;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .referencia-box a { color: #0284c7; text-decoration: none; font-weight: 600; display: block; margin-top: 10px; word-break: break-all; }
+        .referencia-box a { color: #0284c7; text-decoration: none; font-weight: 600; display: block; margin-top: 5px; word-break: break-all; }
         .referencia-box a:hover { text-decoration: underline; color: #0369a1; }
 
+        /* CONTEÚDO DOS SLIDES */
         h2 { 
             color: #0f172a; font-size: 2.2rem; margin-bottom: 25px; 
             border-bottom: 3px solid #f1f5f9; padding-bottom: 15px;
@@ -131,6 +182,7 @@
         .flex-half { flex: 1; background: #f8fafc; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; }
         .flex-half h3 { margin-bottom: 15px; font-size: 1.4rem; }
 
+        /* CONTROLES */
         .controls {
             height: 80px;
             background: #f8fafc;
@@ -150,6 +202,7 @@
         .btn:active { transform: translateY(0); }
         .slide-counter { font-size: 1.1rem; color: #64748b; font-weight: 800; }
 
+        /* RESPONSIVIDADE (Celulares/Tablets) */
         @media (max-width: 768px) {
             body { padding: 10px; }
             .presentation-container { height: 95vh; border-radius: 12px; }
@@ -168,6 +221,13 @@
             .stat-box { padding: 15px; }
             .stat-number { font-size: 2.2rem; }
             
+            /* Ajuste dos QR Codes para telas menores */
+            .qrcode-container { gap: 15px; flex-direction: row; justify-content: space-evenly; }
+            .qrcode-card { width: 140px; padding: 15px; }
+            .qrcode-card img { max-width: 100px; }
+            .qrcode-card span { font-size: 0.9rem; }
+            .qrcode-card p { font-size: 0.75rem; }
+
             .controls { padding: 0 20px; height: 70px; }
             .btn { padding: 10px 15px; font-size: 0.9rem; }
         }
@@ -271,8 +331,22 @@
 
         <div class="slide slide-final" id="slide-5">
             <h2>Obrigado pela atenção! 🐭</h2>
-            <p>Espero que a apresentação tenha ajudado a entender melhor o tema.</p>
+            <p>Escaneie os códigos abaixo para acessar o projeto na íntegra:</p>
             
+            <div class="qrcode-container">
+                <div class="qrcode-card">
+                    <img src="qrcodesite.png" alt="QR Code do Site">
+                    <span>Apresentação</span>
+                    <p>Veja no celular</p>
+                </div>
+                
+                <div class="qrcode-card">
+                    <img src="qrcoderepo.png" alt="QR Code do Repositório">
+                    <span>Código Fonte</span>
+                    <p>Github Repository</p>
+                </div>
+            </div>
+
             <div class="referencia-box">
                 <strong>Fonte e Notícia Original:</strong><br>
                 <a href="https://share.google/qhoWQSUJfwCA5qOgw" target="_blank">
@@ -301,7 +375,6 @@
             if (i === index) slide.classList.add('active');
         });
         counter.innerText = (index + 1) + " / " + slides.length;
-
         wrapper.scrollTop = 0; 
     }
 
