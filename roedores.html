@@ -7,7 +7,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
         
-        /* RESET GLOBAL (Isso impede que fique "torto") */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -16,7 +15,7 @@
 
         body { 
             font-family: 'Inter', sans-serif; 
-            background-color: #0f172a; /* Fundo mais moderno */
+            background-color: #0f172a; 
             color: #1e293b; 
             display: flex;
             justify-content: center;
@@ -25,23 +24,21 @@
             padding: 20px;
         }
         
-        /* CONTAINER PRINCIPAL */
         .presentation-container {
             width: 100%;
             max-width: 1100px;
-            height: 90vh; /* Altura fixa para parecer um aplicativo/software */
+            height: 90vh; 
             background: white;
             border-radius: 16px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             display: flex;
-            flex-direction: column; /* Separa conteúdo dos botões */
+            flex-direction: column; 
             overflow: hidden;
         }
 
-        /* ÁREA DOS SLIDES (Rolagem independente) */
         .slides-wrapper {
-            flex: 1; /* Ocupa todo o espaço livre */
-            overflow-y: auto; /* Se o texto for grande, rola só aqui dentro */
+            flex: 1; 
+            overflow-y: auto; 
             overflow-x: hidden;
             background: #ffffff;
             position: relative;
@@ -55,7 +52,6 @@
             animation: fadeIn 0.4s ease-out;
         }
 
-        /* Slide Ativo: Padrão (Bloco) ou Capa/Final (Centralizado) */
         .slide.active { display: block; }
         .slide-capa.active, .slide-final.active { 
             display: flex; 
@@ -70,9 +66,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ---------------------------------- */
-        /* CAPA E FIM                         */
-        /* ---------------------------------- */
         .slide-capa { background: linear-gradient(135deg, #1e293b, #0f172a, #334155); color: white; }
         
         .badge {
@@ -102,9 +95,6 @@
         .referencia-box a { color: #0284c7; text-decoration: none; font-weight: 600; display: block; margin-top: 10px; word-break: break-all; }
         .referencia-box a:hover { text-decoration: underline; color: #0369a1; }
 
-        /* ---------------------------------- */
-        /* CONTEÚDO DOS SLIDES                */
-        /* ---------------------------------- */
         h2 { 
             color: #0f172a; font-size: 2.2rem; margin-bottom: 25px; 
             border-bottom: 3px solid #f1f5f9; padding-bottom: 15px;
@@ -125,7 +115,6 @@
             font-style: italic; font-size: 1.15rem; color: #166534; margin: 30px 0;
         }
 
-        /* Grids Inteligentes (Auto-ajustáveis sem quebrar) */
         .stats-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -142,9 +131,6 @@
         .flex-half { flex: 1; background: #f8fafc; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; }
         .flex-half h3 { margin-bottom: 15px; font-size: 1.4rem; }
 
-        /* ---------------------------------- */
-        /* CONTROLES (Rodapé Fixo Inferior)   */
-        /* ---------------------------------- */
         .controls {
             height: 80px;
             background: #f8fafc;
@@ -153,7 +139,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 40px;
-            flex-shrink: 0; /* Impede que o rodapé seja esmagado */
+            flex-shrink: 0; 
         }
         .btn {
             background: #1e293b; color: white; border: none; padding: 12px 25px;
@@ -164,9 +150,6 @@
         .btn:active { transform: translateY(0); }
         .slide-counter { font-size: 1.1rem; color: #64748b; font-weight: 800; }
 
-        /* ---------------------------------- */
-        /* RESPONSIVIDADE (Celulares/Tablets) */
-        /* ---------------------------------- */
         @media (max-width: 768px) {
             body { padding: 10px; }
             .presentation-container { height: 95vh; border-radius: 12px; }
@@ -310,7 +293,7 @@
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const counter = document.getElementById('counter');
-    const wrapper = document.querySelector('.slides-wrapper'); // Pegando a área de rolagem
+    const wrapper = document.querySelector('.slides-wrapper');
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
@@ -318,8 +301,7 @@
             if (i === index) slide.classList.add('active');
         });
         counter.innerText = (index + 1) + " / " + slides.length;
-        
-        // Sempre que mudar de slide, joga a barra de rolagem lá pra cima
+
         wrapper.scrollTop = 0; 
     }
 
@@ -337,10 +319,9 @@
         }
     }
 
-    // Passar slide com as setinhas do teclado ou barra de espaço
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight' || e.key === ' ') {
-            e.preventDefault(); // Evita que a barra de espaço role a tela descontroladamente
+            e.preventDefault(); 
             nextSlide();
         } else if (e.key === 'ArrowLeft') {
             e.preventDefault();
