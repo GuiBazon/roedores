@@ -100,7 +100,7 @@
             justify-content: center;
             align-items: center;
             margin-bottom: 30px;
-            flex-wrap: wrap; /* Permite jogar pra linha de baixo se faltar espaço */
+            flex-wrap: wrap; 
         }
         .qrcode-card {
             background: white;
@@ -118,7 +118,6 @@
             max-width: 150px;
             height: auto;
             margin-bottom: 15px;
-            /* Fundo branco extra pra garantir contraste no projetor */
             background: white; 
             padding: 5px;
             border-radius: 8px;
@@ -221,7 +220,6 @@
             .stat-box { padding: 15px; }
             .stat-number { font-size: 2.2rem; }
             
-            /* Ajuste dos QR Codes para telas menores */
             .qrcode-container { gap: 15px; flex-direction: row; justify-content: space-evenly; }
             .qrcode-card { width: 140px; padding: 15px; }
             .qrcode-card img { max-width: 100px; }
@@ -242,94 +240,106 @@
         <div class="slide slide-capa active" id="slide-0">
             <div class="badge">Trabalho de Biologia</div>
             <h1>A Evolução dos Roedores</h1>
-            <p>Como a substituição de garras por unhas no polegar moldou o sucesso da espécie</p>
+            <p>A substituição de garras por unhas e o sucesso evolutivo da espécie</p>
             <div class="aluno-info">
                 Baseado em estudo da Universidade de São Paulo (USP) e Field Museum
             </div>
         </div>
 
         <div class="slide" id="slide-1">
-            <h2>🔬 1. A Descoberta Científica</h2>
-            <p>Um estudo recente liderado por pesquisadores da Universidade de São Paulo (USP) e do Field Museum (EUA) revelou dados inéditos que foram capa da prestigiada revista científica <em>Science</em>.</p>
+            <h2>🔬 1. O Contexto e a Relevância</h2>
+            <p>Este estudo revolucionário foi conduzido por pesquisadores da <strong>Universidade de São Paulo (USP)</strong> e do <strong>Field Museum of Natural History (EUA)</strong>. O impacto da pesquisa foi tão significativo que se tornou capa da prestigiada revista científica <em>Science</em>.</p>
             
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <span class="stat-number">80%</span>
-                    Dos gêneros examinados possuem unha no polegar.
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">40%</span>
-                    É a representatividade deles entre todos os mamíferos.
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">30 Milhões</span>
-                    De anos com essa característica evolutiva.
-                </div>
-            </div>
-
             <div class="texto-destaque">
-                A pesquisa analisou centenas de esqueletos e confirmou que a unha no polegar, e não uma garra comum, é o grande segredo evolutivo compartilhado pela maioria dos roedores atuais.
+                <strong>Curiosidade: O Ponto de Partida</strong><br>
+                A investigação não começou na área da evolução paleontológica. Em 2023, o pesquisador Gordon Shepherd (Universidade de Northwestern) estudava a neurobiologia da alimentação em ratos e percebeu a enorme eficiência e precisão que o uso das patas trazia à nutrição desses animais.
             </div>
         </div>
 
         <div class="slide" id="slide-2">
-            <h2>🐾 2. A Dupla Funcionalidade</h2>
-            <p>A grande sacada evolutiva foi a pata adquirir duas funções distintas ao mesmo tempo, funcionando como uma verdadeira "ferramenta multiuso" para a sobrevivência do animal:</p>
+            <h2>💡 2. A Grande Descoberta Anatômica</h2>
+            <p>A descoberta central quebra um paradigma da biologia: a grande maioria dos roedores possui uma <strong>unha</strong> no polegar (o dedo 1, ou D1), e não uma garra comum.</p>
             
-            <div class="flex-row">
-                <div class="flex-half">
-                    <h3 style="color: #0284c7;">Dedo 1: Polegar com Unha</h3>
-                    <ul>
-                        <li>Garante <strong>destreza e sensibilidade</strong>.</li>
-                        <li>Permite manipular alimentos de forma delicada.</li>
-                        <li>É essencial para segurar e quebrar sementes.</li>
-                    </ul>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">90%</span>
+                    Das espécies descritas de roedores foram representadas na análise.
                 </div>
-                <div class="flex-half">
-                    <h3 style="color: #b91c1c;">Outros Dedos: Garras</h3>
-                    <ul>
-                        <li>Garantem <strong>força mecânica e tração</strong>.</li>
-                        <li>Usados para cavar buracos e criar tocas.</li>
-                        <li>Usados para escalada e defesa no ambiente.</li>
-                    </ul>
+                <div class="stat-box">
+                    <span class="stat-number">80%</span>
+                    Dos gêneros examinados possuem a unha no polegar.
                 </div>
             </div>
 
-            <div class="texto-destaque">
-                Enquanto as garras fazem o trabalho pesado, a unha no polegar atua como uma pinça de alta precisão. Essa divisão de tarefas foi fundamental para acessarem novos alimentos.
-            </div>
+            <p><span class="highlight">O Fim do "Monopólio" dos Primatas:</span> Historicamente, a ciência focava apenas nos primatas (macacos, humanos) quando se falava em unhas funcionais. A literatura antiga classificava os polegares dos roedores como "vestigiais" (sem função). Este estudo provou o contrário: o polegar deles é uma ferramenta anatômica altamente refinada.</p>
         </div>
 
         <div class="slide" id="slide-3">
-            <h2>🌍 3. Impacto Filogenético e Evolutivo</h2>
-            <p>Ter essa "ferramenta de precisão" nas patas mudou a história filogenética dos roedores, ditando como eles se ramificaram ao longo do tempo evolutivo.</p>
+            <h2>🦴 3. Morfologia: Unha vs. Garra</h2>
+            <p>A pesquisa categorizou a estrutura queratinizada nas patas (chamada de <em>únguis</em>) de duas formas essenciais, explicando a "dupla funcionalidade" das patas:</p>
             
-            <ul>
-                <li><span class="highlight">Domínio Global:</span> Sobrevivência e colonização em <strong>todos os continentes</strong> do globo (com exceção da Antártida).</li>
-                <li><span class="highlight">Novos Nichos:</span> Adaptação rápida a diferentes ecossistemas, como florestas densas, desertos e até ambientes urbanos modernos.</li>
-                <li><span class="highlight">Fim do "Monopólio":</span> Anteriormente, a ciência focava a presença de unhas apenas em primatas. O estudo provou que a destreza manual também é o grande trunfo dos roedores.</li>
-            </ul>
-
-            <div class="texto-destaque">
-                Essa adaptação anatômica abriu portas evolutivas cruciais. Foi o diferencial que permitiu a esses animais dominarem o planeta e se diversificarem em milhares de espécies.
+            <div class="flex-row">
+                <div class="flex-half">
+                    <h3 style="color: #0284c7;">A Unha (Polegar/D1)</h3>
+                    <ul>
+                        <li>Estrutura <strong>larga e achatada</strong>.</li>
+                        <li>Funciona como uma pinça tátil.</li>
+                        <li>Garante extrema destreza e precisão milimétrica.</li>
+                    </ul>
+                </div>
+                <div class="flex-half">
+                    <h3 style="color: #b91c1c;">As Garras (Restantes)</h3>
+                    <ul>
+                        <li>Estruturas <strong>afiadas e curvadas</strong>.</li>
+                        <li>Garantem tração e força mecânica.</li>
+                        <li>Servem para escavar (animais fossoriais) ou escalar.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="slide" id="slide-4">
-            <h2>🏛️ 4. A Importância das Coleções Científicas</h2>
-            <p>O estudo só foi possível porque os cientistas puderam analisar centenas de espécimes de roedores preservados em coleções de museus ao redor do mundo, muitos coletados há dezenas de anos.</p>
+            <h2>🍽️ 4. O Papel da Alimentação na Evolução</h2>
+            <p>A presença da unha no polegar permitiu aos roedores acessar recursos altamente nutritivos (como sementes duras e nozes) que outros mamíferos não conseguem manipular facilmente.</p>
             
-            <div class="quote-box">
-                "Quando esses animais usados no estudo foram coletados, ninguém imaginava que alguém faria uma pesquisa sobre as unhas dos roedores. Isso só mostra como as coleções científicas são essenciais."
-                <br><br><strong>- Anderson Feijó</strong> (Coautor do estudo)
-            </div>
-
-            <div class="texto-destaque">
-                Isso destaca a importância crucial dos museus. Sem esse acervo de história natural preservado, a ciência não teria material básico para realizar descobertas que mudam a nossa compreensão da vida na Terra.
+            <div class="flex-row">
+                <div class="flex-half">
+                    <h3 style="color: #16a34a;">Alimentação Oromanual</h3>
+                    <p>É o ato de levar o alimento à boca utilizando as patas. Roedores com unhas nos polegares usam este método para rodar, descascar e quebrar sementes com extrema eficiência, aliando a precisão das patas ao poder dos dentes incisivos.</p>
+                </div>
+                <div class="flex-half">
+                    <h3 style="color: #d97706;">Alimentação Oral</h3>
+                    <p>Consumo direto com a boca, sem auxílio das patas. Espécies que perderam o polegar adotaram este método (ex: pastar gramíneas como as <strong>capivaras</strong>, ou esquilos das Filipinas que comem casca de árvore diretamente com os dentes).</p>
+                </div>
             </div>
         </div>
 
-        <div class="slide slide-final" id="slide-5">
+        <div class="slide" id="slide-5">
+            <h2>🌍 5. Impacto Filogenético e Geográfico</h2>
+            <p>O desenvolvimento desta "ferramenta multiuso" (unha de precisão + garras de força) é um dos grandes segredos evolutivos desta linhagem.</p>
+            
+            <ul>
+                <li><span class="highlight">Tempo Evolutivo:</span> Essa característica é compartilhada há pelo menos <strong>30 a 50 milhões de anos</strong> (comprovado por registros fósseis de ossos que sustentavam essas unhas).</li>
+                <li><span class="highlight">Diversidade:</span> Essa adaptação mecânica fez dos roedores o grupo de mamíferos mais diversificado do planeta, representando cerca de <strong>40% de todas as espécies</strong> de mamíferos.</li>
+                <li><span class="highlight">Colonização Global:</span> Permitiu a sua sobrevivência e expansão vertiginosa por todos os continentes, com a única exceção da Antártida.</li>
+            </ul>
+        </div>
+
+        <div class="slide" id="slide-6">
+            <h2>🏛️ 6. A Importância Crítica dos Museus</h2>
+            <p>Para provar tudo isso, os cientistas não foram para a floresta capturar animais atuais. Eles recorreram a coleções de história natural em museus, como o <strong>Field Museum</strong> e o <strong>Museu de Zoologia da USP (MZUSP)</strong>.</p>
+            
+            <div class="quote-box">
+                "Quando esses animais foram coletados há décadas atrás, ninguém imaginava que viriam a ser usados num estudo sobre polegares. Isso prova que os museus são fontes infinitas de descobertas."
+                <br><br><strong>- Anderson Feijó</strong> (Pesquisador e Coautor do estudo)
+            </div>
+
+            <div class="texto-destaque">
+                <strong>Lição Fundamental:</strong> A preservação de acervos científicos é a base fundamental para o avanço da biologia e da ciência moderna.
+            </div>
+        </div>
+
+        <div class="slide slide-final" id="slide-7">
             <h2>Obrigado pela atenção! 🐭</h2>
             <p>Escaneie os códigos abaixo para acessar o projeto na íntegra:</p>
             
@@ -350,14 +360,14 @@
             <div class="referencia-box">
                 <strong>Fonte e Notícia Original:</strong><br>
                 <a href="https://share.google/qhoWQSUJfwCA5qOgw" target="_blank">
-                    Acessar a reportagem completa sobre o estudo (Jornal da USP)
+                    Acessar a reportagem completa sobre o estudo (Jornal da USP / Science)
                 </a>
             </div>
         </div>
 
     </div> <div class="controls">
         <button class="btn" onclick="prevSlide()">◀ Anterior</button>
-        <div class="slide-counter" id="counter">1 / 6</div>
+        <div class="slide-counter" id="counter">1 / 8</div>
         <button class="btn" onclick="nextSlide()">Próximo ▶</button>
     </div>
 
